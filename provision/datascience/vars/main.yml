@@ -1,0 +1,2 @@
+local_dev_path: /home/vagrant/fakenews
+virtualenv_path: /home/vagrant/.venv

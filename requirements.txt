@@ -1,0 +1,7 @@
+numpy==1.12.0 # https://pypi.python.org/pypi/numpy
+scipy==0.18.1 # https://pypi.python.org/pypi/scipy
+scikit-learn==0.18.1 # https://pypi.python.org/pypi/scikit-learn
+jupyter==1.0.0 # https://pypi.python.org/pypi/jupyter-pip
+nltk==3.2.2 # https://pypi.python.org/pypi/nltk
+# spacy==1.6.0 # https://pypi.python.org/pypi/spacy
+
