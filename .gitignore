@@ -2,7 +2,10 @@
 # User added
 *~
 .vagrant
-
+provision/local.retry
+provision/dev_env.yml
+provision/nave_dev/
+\#*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -93,4 +96,3 @@ ENV/
 
 # Rope project settings
 .ropeproject
->>>>>>> 6f244dc594d5eb269018ab8f8bc6e2b973deedc7

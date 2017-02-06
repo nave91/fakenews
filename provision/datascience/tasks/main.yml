@@ -15,6 +15,10 @@
      - libpq-dev
      - git
 
+- name: Update base system packages
+  become: yes
+  apt: upgrade=yes
+
 - name: create virtualenv with python3
   shell: virtualenv {{ virtualenv_path }} -p python3
 
@@ -34,5 +38,5 @@
   lineinfile: dest=/home/vagrant/.bashrc line=". {{ local_dev_path }}/local_env.sh"
 
 - name: Dev environment for zshrc
-  lineinfile: dest=/home/vagrant/.zshrc line=". {{ app_path }}/bellhops_env.sh"
+  lineinfile: dest=/home/vagrant/.zshrc line=". {{ local_dev_path }}/local_env.sh"
   ignore_errors: true
