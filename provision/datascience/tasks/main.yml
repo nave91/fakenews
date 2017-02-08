@@ -1,5 +1,5 @@
 - name: install base system packages
-  become: yes
+  become: true
   apt: pkg={{ item }} state=installed update_cache=yes
   with_items:
      - python3-dev
@@ -16,14 +16,17 @@
      - git
 
 - name: Update base system packages
-  become: yes
+  become: true
   apt: upgrade=yes
 
 - name: create virtualenv with python3
   shell: virtualenv {{ virtualenv_path }} -p python3
 
+- include: install-pip.yml
+
 - name: Install pip dependencies
-  pip: virtualenv="{{ virtualenv_path }}"
+  pip:
+    virtualenv="{{ virtualenv_path }}"
     chdir="{{ local_dev_path }}"
     requirements="{{ local_dev_path }}/{{ item }}"
   with_items:
