@@ -1,2 +1,7 @@
 local_dev_path: /home/vagrant/fakenews
 virtualenv_path: /home/vagrant/.venv
+
+pip_download_dest: /tmp
+pip_version: latest
+python: python3
+pip: pip3
